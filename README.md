@@ -41,14 +41,23 @@ Develop a recommendation system that:
 - Ensemble methods for improved performance
 - Comprehensive data sparsity analysis (94.14% sparse matrix)
 
-##  Results
+##  Results Before Tuning
+
+<img width="1586" height="590" alt="image" src="https://github.com/user-attachments/assets/d0346fd4-8773-479c-ba29-6eef645d9e2f" />
+
 
 | Model | RMSE | MAE | Performance |
 |-------|------|-----|-------------|
-| **SVD (Production)** | **0.8703** | **0.6681** | **Best Overall** |
-| BaselineOnly | 0.8536 | 0.6611 | Best Validation |
-| KNNWithMeans | 0.8928 | 0.6854 | Competitive |
-| NMF | 0.9101 | 0.6973 | Interpretable |
+| **SVD (Production)** | **0.8566** | **0.6575** | **Best Overall** |
+| BaselineOnly | 0.8536 | 0.6561 | Best Validation |
+| KNNWithMeans | 0.8601 | 0.6597 | Competitive |
+| NMF | 0.8872  | 0.6807 | Interpretable |
+| KNNBasic | 0.9414   | 0.7300 | Interpretable |
+
+## Results After Tuning
+
+<img width="1586" height="590" alt="image" src="https://github.com/user-attachments/assets/80745306-b430-418a-9510-f1f3b25e0b45" />
+
 
 **Selected Model:** SVD with optimized hyperparameters
 - Exceeds RMSE target (0.8703 < 1.0)
@@ -61,6 +70,16 @@ Develop a recommendation system that:
 2. **Genre Distribution**: Drama dominates (4,361 movies), 11.4x more common than War
 3. **User Engagement**: Highly variable (20-2,698 ratings per user)
 4. **Data Sparsity**: 94.14% sparse matrix typical for collaborative filtering
+
+## 📽 TOP 5 MOVIE RECOMMENDATIONS FOR USER 1
+
+| Rank | Movie Title | Predicted Rating | Average Rating | Genres |
+|------|-------------|------------------|----------------|--------|
+| 1 | Shawshank Redemption, The (1994) | 5.00 | 4.43 (317 ratings) | Crime, Drama |
+| 2 | Dark Knight, The (2008) | 5.00 | 4.24 (149 ratings) | Action, Crime, Drama, IMAX |
+| 3 | Philadelphia Story, The (1940) | 5.00 | 4.31 (29 ratings) | Comedy, Drama, Romance |
+| 4 | Rear Window (1954) | 5.00 | 4.26 (84 ratings) | Mystery, Thriller |
+| 5 | North by Northwest (1959) | 5.00 | 4.18 (57 ratings) | Action, Adventure, Mystery, Romance, Thriller |
 
 ##  Deployment Recommendations
 
@@ -99,21 +118,40 @@ Develop a recommendation system that:
 - **Matplotlib & Seaborn** - Data visualization
 - **Scikit-learn** - Model evaluation and optimization
 
-## 📁 Project Structure
+##  Repository Structure
 
 ```
+MovieLens-Recommendation-System/
+│
 ├── Data/
-│   ├── ratings.csv
-│   ├── movies.csv
-│   └── tags.csv
+│   ├── ratings.csv              # User-movie ratings
+│   ├── movies.csv               # Movie metadata
+│   ├── tags.csv                 # User-generated tags
+│   └── links.csv                # External movie IDs
+│
 ├── Movie_recommendation_system_FINAL.ipynb
-└── README.md
-```
+│   └── Complete analysis pipeline
+│       ├── 1. Business Understanding
+│       ├── 2. Data Understanding
+│       ├── 3. Data Preparation
+│       ├── 4. Exploratory Data Analysis
+│       ├── 5. Modeling
+│       │   ├── Baseline
+│       │   ├── SVD
+│       │   ├── KNN Methods
+│       │   ├── NMF
+│       │   ├── BaselineOnly
+│       │   └── Hyperparameter Tuning
+│       └── 6. Conclusions & Recommendations
+│
+├── README.md                    # This file
+│
+└── requirements.txt             # Python dependencies
 
+```
 ## 🎓 Conclusion
 
 This project successfully demonstrates that collaborative filtering can deliver accurate, personalized movie recommendations with RMSE of 0.8703, exceeding the business target. The SVD model balances prediction accuracy with computational efficiency, making it ideal for production deployment in streaming platforms.
 
----
 
 **Contact:** For questions or collaboration opportunities, please reach out to the project team.
