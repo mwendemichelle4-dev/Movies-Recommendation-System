@@ -1,10 +1,19 @@
-# Movies-Recommendation-System
 
-A collaborative filtering-based movie recommendation system built to deliver personalized movie suggestions for streaming platforms.
+![head](https://github.com/user-attachments/assets/a626bdf6-b822-48da-91ab-6696aef65715)
 
-##  Team
 
-**Authors:** Winnie Njoroge, Michelle Mwende, Laban Leploote, Alice Mathenge, Dean Mutie
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)
+![scikit-surprise](https://img.shields.io/badge/scikit--surprise-1.1.3-green.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+**Authors:** Winnie Njoroge | Michelle Mwende | Laban Leploote | Alice Mathenge | Dean Mutie  
+**Date:** February 2026
+
+</div>
+
 
 ##  Overview
 
@@ -20,6 +29,7 @@ Develop a recommendation system that:
 
 ##  Dataset
 
+**Data Source** [View Notebook](./movie_recommendation_system_FINAL.ipynb) • [Dataset](http://files.grouplens.org/datasets/movielens/)
 **MovieLens 100K Dataset** from GroupLens Research
 - **100,836 ratings** from 610 users across 9,742 movies
 - Rating scale: 0.5 to 5.0 stars
@@ -70,6 +80,9 @@ Develop a recommendation system that:
 2. **Genre Distribution**: Drama dominates (4,361 movies), 11.4x more common than War
 3. **User Engagement**: Highly variable (20-2,698 ratings per user)
 4. **Data Sparsity**: 94.14% sparse matrix typical for collaborative filtering
+
+<img width="1389" height="283" alt="combined_analysis" src="https://github.com/user-attachments/assets/a65eee1c-093f-4518-89c5-8c93844eb201" />
+
 
 ## 📽 TOP 5 MOVIE RECOMMENDATIONS FOR USER 1
 
@@ -155,3 +168,13 @@ This project successfully demonstrates that collaborative filtering can deliver 
 
 
 **Contact:** For questions or collaboration opportunities, please reach out to the project team.
+
+Email: muimidean@gmail.com
+
+Email: mathengealice709@gmail.com
+
+Email: muthoniwinnie573@gmail.com
+
+Email: mwendemichelle4@gmail.com
+
+Email: labanltarasin@gmail.com
